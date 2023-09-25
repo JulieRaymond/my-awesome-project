@@ -1,109 +1,54 @@
 <?php
 
-// //Write a loop to plant 3 trees (you should display '🌳🌳🌳').
-$i = 0;
-for ($i === 0; $i < 3; $i ++) {
-    echo "🌳";
-}
-echo "<br>";
-// Write a loop to plant 8 🌳 .
-$i = 0;
-for ($i === 0; $i < 8; $i ++) {
-    echo "🌳";
-}
-echo "<br>";
-// Write a loop to plant 20 🌳 .
-$i = 0;
-for ($i === 0; $i < 20; $i ++) {
-    echo "🌳";
-}
-echo "<br>";
-
-// Now, you have to plant 🌲. You need 2 hours to plant a 🌲.
-// Hint: you shouldn't calculate the amount of trees planted before but have the loop do it for you. 
-//Probably using a $numberOfHours counter
-// Write a loop to plant 🌲 during a 6 hours working day.
-$numberOfHours = 6;
-$treesPlanted = 0;
-
-while ($numberOfHours >= 2) {
-    $numberOfHours -= 2;
-    $treesPlanted++;
-}
-
-echo "Planted $treesPlanted 🌲 during a 6-hour working day.";
-echo "<br>";
-
-// Write a loop to plant 🌲 during a 8 hours working day.
-$numberOfHours = 8;
-$treesPlanted = 0;
-
-while ($numberOfHours >= 2) {
-    $numberOfHours -= 2;
-    $treesPlanted++;
-}
-
-echo "Planted $treesPlanted 🌲 during an 8-hour working day.";
-echo "<br>";
-
-// Write a loop to plant 🌲 during a 9 hours working day.
-$numberOfHours = 9;
-$treesPlanted = 0;
-
-while ($numberOfHours >= 2) {
-    $numberOfHours -= 2;
-    $treesPlanted++;
-}
-
-echo "Planted $treesPlanted 🌲 during an 9-hour working day.";
-echo "<br>";
-
-// 🌴. You need 3 hours of work to plant one 🌴.
-//Write a loop to plant 🌴 during a 6 hours working day.
-$numberOfHours = 6;
-$palmsPlanted = 0;
-
-while ($numberOfHours >= 3){
-    $numberOfHours -= 3;
-    $palmsPlanted ++;
-}
-echo "Planted " . $palmsPlanted . "🌴 during an 6 hours working day";
-echo "<br>";
-//Write a loop to plant 🌴 during a 2 hours working day.
-$numberOfHours = 2;
-$palmsPlanted = 0;
-
-while ($numberOfHours >= 3){
-    $numberOfHours -= 3;
-    $palmsPlanted ++;
-}
-echo "Planted " . $palmsPlanted . "🌴 during an 2 hours working day";
-echo "<br>";
-
-//Write a loop to plant 🌴 during a 8 hours working day.
-$numberOfHours = 8;
-$palmsPlanted = 0;
-
-while ($numberOfHours >= 3){
-    $numberOfHours -= 3;
-    $palmsPlanted ++;
-}
-echo "Planted " . $palmsPlanted . "🌴 during an 8 hours working day";
-echo "<br>";
-
-// Using 2 nested loops, display a forest of 8 columns and 3 rows. Use PHP_EOL to create new lines.
-// You should obtain
-// 🌳🌳🌳🌳🌳🌳🌳🌳
-// 🌳🌳🌳🌳🌳🌳🌳🌳
-// 🌳🌳🌳🌳🌳🌳🌳🌳
-
-$columns = 0;
-$rows = 0;
-
-for ($columns = 0; $columns < 8; $columns ++){
-    echo "🌳";
-    for ($rows = 0; $rows < 3; $rows ++){
+for ($rows = 0; $rows < 3; $rows++) {
+    for ($columns = 0; $columns < 8; $columns++) {
         echo "🌳";
+    }
+    echo PHP_EOL;
+}
+echo "<br>";
+
+//Display a forest of 40 columns and 25 rows. 
+for ($rows = 0; $rows < 25; $rows++) {
+    for ($columns = 0; $columns < 40; $columns++) {
+        echo "🌳";
+    }
+    echo PHP_EOL;
+}
+
+//Create a forest of 10 columns and 5 rows, 
+//use modulo operator % if you have a odd or even value
+
+for ($rows = 0; $rows < 5; $rows++) {
+    for ($columns = 0; $columns < 10; $columns++) {
+        if (($rows % 2) == 0) {
+            echo "🌳";
+        } else {
+            echo "🌲";
+        }
+    }
+    echo PHP_EOL;
+}
+
+//Create a forest of 7 columns and 8 rows, with alternate types of trees in each column
+for ($rows = 0; $rows < 8; $rows++) {
+    for ($columns = 0; $columns < 7; $columns++) {
+        if (($columns % 2) == 0) {
+            echo "🌳";
+        } else {
+            echo "🌲";
+        }
+    }
+    echo PHP_EOL;
+}
+
+// number of rows for the triangle
+$num_rows = 5;
+
+// Loop through each row
+for ($i = 0; $i < $num_rows; $i++) {
+    for ($j = 0; $j <= $i; $j++) {
+        echo '🌳';
     }
     echo PHP_EOL;
 }
