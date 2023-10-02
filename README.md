@@ -1,3 +1,3 @@
 # my-awesome-project
 
-Quests and exercices
+Quests and exercices around loops :)
